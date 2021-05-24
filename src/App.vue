@@ -1,45 +1,11 @@
 <template>
   <div id="app">
     <h1>todo app</h1>
-    <AddTodo 
-      @add-todo="AddTodo"
-    />
     <hr>
-    <TodoList 
-    v-bind:todos="todos"
-    @remove-todo="removeTodo"
-    />
+
+    <router-view />
   </div>
 </template>
-
-<script>
-import TodoList from '@/components/TodoList'
-import AddTodo from '@/components/AddTodo'
-
-export default {
-  name: 'app',
-  data () {
-    return {
-      todos: [
-        {id: 1,title:'Купить хлеб', complited: false},
-        {id: 2,title:'Купить масло', complited: false},
-        {id: 3,title:'Купить пиво', complited: false}
-      ]
-    }
-  },
-  methods: {
-  removeTodo(id) {
-    this.todos = this.todos.filter(t => t.id !== id)
-    },
-    addTodo(todo) {
-      this.todos.push(todo)
-    }
-  },
-  components: {
-    TodoList, AddTodo
-  }
-}
-</script>
 
 <style>
 #app {
@@ -47,7 +13,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #6e1919;
   margin-top: 60px;
 }
 </style>

@@ -5,7 +5,7 @@
          <strong>{{index + 1}}</strong>
          {{todo.title | uppercase}}
       </span>
-      <button class="rm" v-on:click="$emit('remove-todo', todo.id)">&times;</button>
+      <button class="rm" v-on:click="$emit('do-remove-todo', todo.id)">&times;</button>
    </li>
 </template>
 

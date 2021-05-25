@@ -5,7 +5,7 @@
          v-for= "(todo, i) in todos" 
          v-bind:todo="todo" :key=" i" 
          v-bind:index="i"
-         v-on:remove-todo="removeTodo"
+         v-on:do-remove-todo="removeTodo"
          />
       </ul>
    </div>
@@ -20,6 +20,7 @@ export default {
    },
    methods: {
       removeTodo(id) {
+         console.log('ASODIJNASODNASOD');
          this.$emit('remove-todo', id)
       }
    }

@@ -20,7 +20,7 @@
 </div>
 </template>
 
-<script>
+<>
 import TodoList from '@/components/TodoList'
 import AddTodo from '@/components/AddTodo'
 import Loader from '@/components/Loader'
